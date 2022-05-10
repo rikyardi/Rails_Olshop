@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
 
-  get 'signup' => "users#formSignup"
-  post 'users/signup' => "users#signup"
   get '/' => "home#index"
+
+  get 'signup' => "users#formSignup"
+  get 'login' => "users#formLogin"
+  get 'logout' => "users#logout"
+  post 'users/login' => "users#login"
+  post 'users/signup' => "users#create"
 
 end
