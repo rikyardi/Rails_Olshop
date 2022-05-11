@@ -27,24 +27,30 @@
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <% if @current_user %>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
+                <a class="nav-link active" aria-current="page" href="/"><i class="fa-solid fa-house"></i> Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Feed</a>
+                <a class="nav-link" href="#"><i class="fa-solid fa-newspaper"></i> Feeds</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-solid fa-heart"></i> Wishlist</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown 
+                  <i class="fa-solid fa-user"></i> Hello <%= @current_user.nama.split()[0] %>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-id-card"></i> My Profile</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-shop"></i> Create your shop </a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/logout">Logout</a>
+                <a class="nav-link" href="/logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
               </li>
               <% else %>
               <li class="nav-item">

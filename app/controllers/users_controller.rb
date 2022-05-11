@@ -7,7 +7,13 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(email: params[:email], password: params[:password])
+    @user = User.new(
+      email: params[:email], 
+      password: params[:password],
+      nama: params[:nama],
+      alamat: params[:alamat],
+      no_telp: params[:notelp]
+      )
     if @user.save
       flash[:notice] = "You have signed up successfully!"
       redirect_to("/login")
@@ -34,5 +40,6 @@ class UsersController < ApplicationController
     flash[:notice] = "You have logged out successfully"
     redirect_to("/login")
   end
+
 
 end
