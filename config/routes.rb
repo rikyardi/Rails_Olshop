@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-
+  
+  get 'users/shop' => "toko#formShop"
+  get "toko/:id" => "toko#myShop"
+  post "toko/create" => "toko#create"
   get '/' => "home#index"
 
   get 'signup' => "users#formSignup"

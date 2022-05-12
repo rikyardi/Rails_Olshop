@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_11_032039) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_12_075329) do
+  create_table "tokos", force: :cascade do |t|
+    t.string "id_user"
+    t.string "nama_toko"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "deskripsi"
+    t.string "toko_images"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "password"
